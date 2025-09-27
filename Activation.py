@@ -18,52 +18,52 @@ import numpy as np
 
 class Activation:
     @staticmethod
-    def sigmoid(x):
+    def sigmoid(x) -> np.ndarray:
         return 1.0 / (1.0 + np.exp(-x))
     
     @staticmethod
-    def sigmoid_prime(x):
+    def sigmoid_prime(x) -> np.ndarray:
         return Activation.sigmoid(x)*(1.0-Activation.sigmoid(x))
     
     @staticmethod
-    def tanh(x):
+    def tanh(x) -> np.ndarray:
         return np.tanh(x)
     
     @staticmethod
-    def tanh_prime(x):
+    def tanh_prime(x) -> np.ndarray:
         return 1 - Activation.tanh(x) ** 2
 
     @staticmethod
-    def ReLU(x):
+    def ReLU(x) -> np.ndarray:
         return np.maximum(0, x)
 
     @staticmethod
-    def ReLU_prime(x):
+    def ReLU_prime(x) -> np.ndarray:
         return np.greater(x, 0.).astype(np.float64)
     
     @staticmethod
-    def PReLU(m, x):
+    def PReLU(m, x) -> np.ndarray:
         return np.maximum(m*x, x)
     
     @staticmethod
-    def PReLU_prime(m, x):
+    def PReLU_prime(m, x) -> np.ndarray:
         raise NotImplementedError
     
     @staticmethod
-    def ELU(alpha, x):
+    def ELU(alpha, x) -> np.ndarray:
         raise NotImplementedError
     
     @staticmethod
-    def ELU_prime(alpha, x):
+    def ELU_prime(alpha, x) -> np.ndarray:
         raise NotImplementedError
     
     @staticmethod
-    def softmax(x, shift=True):
+    def softmax(x, shift=True) -> np.ndarray:
         if shift:
             norm = -np.max(x)
             return np.exp(x + norm) / np.sum(np.exp(x + norm))
         else: return np.exp(x) / np.sum(np.exp(x))
     
     @staticmethod
-    def swish(x):
+    def swish(x) -> np.ndarray:
         return x * Activation.sigmoid(x)
