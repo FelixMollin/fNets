@@ -17,7 +17,12 @@ to your training dataset.
 
 ## How to install fNets via pip
 
-1. copy : pip install git+https://github.com/FelixMollin/fNets 
+1. run in command prompt: 
+
+"""
+pip install git+https://github.com/FelixMollin/fNets
+""" 
+
 2. import fNets into your .py projects
 
 HELP: https://stackoverflow.com/questions/15268953/how-to-install-python-package-from-github
