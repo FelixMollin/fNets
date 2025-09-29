@@ -19,9 +19,9 @@ to your training dataset.
 
 1. run in command prompt: 
 
-"""
+'''
 pip install git+https://github.com/FelixMollin/fNets
-""" 
+'''
 
 2. import fNets into your .py projects
 
