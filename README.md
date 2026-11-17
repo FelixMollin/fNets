@@ -8,8 +8,7 @@ to your training dataset.
 * Create easy to understand Neural Networks
 * Create simple Neural Networks to be run on small devices
 * Perpetually integrate new training data
-* NeuralNetwork "CI/CD"
-* easy Network scaling
+* easy NeuralNetwork scaling
 
 ## Illustration
 
